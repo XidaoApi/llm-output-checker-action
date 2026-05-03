@@ -1,0 +1,30 @@
+{
+  "name": "llm-output-checker-action",
+  "version": "1.0.0",
+  "description": "GitHub Action to validate LLM API responses for format, safety, and quality",
+  "main": "dist/index.js",
+  "scripts": {
+    "build": "ncc build src/index.js -o dist --source-map --license licenses.txt",
+    "test": "jest"
+  },
+  "keywords": [
+    "github-action",
+    "llm",
+    "testing",
+    "ci-cd",
+    "ai",
+    "openai-compatible",
+    "quality-assurance",
+    "2026"
+  ],
+  "author": "XidaoApi",
+  "license": "MIT",
+  "dependencies": {
+    "@actions/core": "^1.11.0",
+    "js-yaml": "^4.1.0"
+  },
+  "devDependencies": {
+    "@vercel/ncc": "^0.38.0",
+    "jest": "^29.0.0"
+  }
+}

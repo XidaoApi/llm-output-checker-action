@@ -1,0 +1,52 @@
+# LLM Output Checker — GitHub Action
+# Validate LLM API responses in your CI/CD pipeline
+
+name: 'LLM Output Checker'
+description: 'Test and validate LLM API responses for format, safety, and quality in GitHub Actions CI/CD'
+
+branding:
+  icon: 'check-circle'
+  color: 'green'
+
+inputs:
+  api-key:
+    description: 'API key for the LLM provider'
+    required: true
+  base-url:
+    description: 'OpenAI-compatible API endpoint'
+    required: false
+    default: 'https://api.openai.com/v1'
+  model:
+    description: 'Model to use for tests'
+    required: false
+    default: 'gpt-5'
+  test-file:
+    description: 'Path to test YAML file'
+    required: false
+    default: 'tests/llm-tests.yml'
+  fail-on-warning:
+    description: 'Fail the action on warnings'
+    required: false
+    default: 'false'
+  max-cost:
+    description: 'Maximum cost per run in USD'
+    required: false
+    default: '1.00'
+  output-format:
+    description: 'Report format: text, json, or markdown'
+    required: false
+    default: 'text'
+
+outputs:
+  passed:
+    description: 'Number of tests passed'
+  failed:
+    description: 'Number of tests failed'
+  total-cost:
+    description: 'Total API cost for this run'
+  report:
+    description: 'Full test report'
+
+runs:
+  using: 'node20'
+  main: 'dist/index.js'
