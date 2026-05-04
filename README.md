@@ -1,5 +1,8 @@
 # LLM Output Checker — GitHub Action
 
+![License](https://img.shields.io/github/license/XidaoApi/llm-output-checker-action) ![Stars](https://img.shields.io/github/stars/XidaoApi/llm-output-checker-action?style=social) ![Last Commit](https://img.shields.io/github/last-commit/XidaoApi/llm-output-checker-action) [![Release](https://img.shields.io/github/v/release/XidaoApi/llm-output-checker-action)](https://github.com/XidaoApi/llm-output-checker-action/releases)
+
+
 Validate LLM API responses in your CI/CD pipeline. Catch regressions in prompt quality, response format, and content safety before they reach production.
 
 ## Why This Action?
